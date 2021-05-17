@@ -1,0 +1,143 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: snow;
+}
+
+#header {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 28px;
+  text-decoration: none;
+  font-family: sans-serif;
+  padding-right: 5px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.button:disabled {
+  background-color: #e7e7e7;
+  color: gray;
+  border: 1px solid #e7e7e7;
+  cursor: not-allowed;
+}
+
+.blue {
+  background-color: #008cba;
+  border: 2px solid #008cba;
+}
+
+.blue:hover:enabled {
+  background-color: white;
+  color: black;
+}
+
+.green {
+  background-color: #4caf50;
+  border: 2px solid #4caf50;
+}
+
+.green:hover:enabled {
+  background-color: white;
+  color: black;
+}
+
+#grid {
+  position: relative;
+  height: 100%;
+}
+
+.start {
+  background-color: #17d63e !important;
+  border: 1px solid #0a5f1b !important;
+}
+
+.end {
+  background-color: #d63030 !important;
+  border: 1px solid #4b1212 !important;
+}
+
+.visited {
+  border: 1px solid rgb(175, 216, 248);
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 1;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+.path {
+  animation-name: pathAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  50% {
+    transform: scale(0.3);
+    background-color: rgba(132, 94, 194, 0.75);
+    border-radius: 100%;
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(255, 111, 145, 0.75);
+  }
+}
+
+@keyframes pathAnimation {
+  50% {
+    transform: scale(0.3);
+    background-color: rgba(255, 199, 95, 0.75);
+    border-radius: 100%;
+  }
+
+  75% {
+    transform: scale(0.9);
+    background-color: rgba(255, 150, 113, 0.75);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(249, 248, 113, 0.75);
+    border: 1px solid rgb(192, 192, 20);
+  }
+}
+
+
+/*# sourceMappingURL=/main.af46ece4.css.map */
